@@ -4,18 +4,17 @@ let isNumber = function(n) {
     return !isNaN(parseFloat(n)) && isFinite(n);
 };
 
-
-let enter = 5;
-
 //"Загадывание случайного числа от 1 до 100"
 
 let playGame = function() {
     let question1 = prompt('Угадай число от 1 до 100');
+    
     while(!isNumber(question1)) {
         alert('Введи число!');
         question1 = prompt('Угадай число от 1 до 100');                       
     }
     question1 = parseFloat(question1);
+    let enter = 5;
 
     let select = function() {
         if(question1 === enter) {
